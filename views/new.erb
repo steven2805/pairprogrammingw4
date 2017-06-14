@@ -3,16 +3,17 @@
 
 <label for= 'last-name'>Last Name:</label><input id="last-name" type='text' name="last_name">
 
-<label for= 'houses'>Select a House</label>
-<select id='house-select' name='house'><option value='Pepperoni'>Pepperoni</option>
-<option value="Italian Sausage">Italian Sausage</option>
-</select>
+<label for = "house-select"> House: </label>
+  <select id="house-select" name = "house">
+  <% @house.each do |house| %>
+    <option value=<%= house.id %>><%= house.name %></option>
+    <% end %>
+  </select>
+
 
 <label for= 'age'>Age:</label><input id="age" type='number' name="age">
 
 <input type="submit" value="Enroll Student">
-
-
 
 
 
